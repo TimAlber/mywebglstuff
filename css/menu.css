@@ -1,0 +1,84 @@
+body {
+    background-color: #000000;
+    padding: 4px;
+    color: #00FF00;
+    font-weight: lighter;
+    font-size: 21px;
+}
+
+a:link {
+    color: transparent;
+}
+
+a:visited {
+    color: transparent;
+}
+
+a:hover {
+    color: #00FF00;
+}
+
+a:active {
+    color: red;
+}
+
+iframe {
+    border-top: #00FF00 1px dotted;
+    border-right: #00FF00 1px dotted;
+    border-left: #00FF00 1px dotted;
+    border-bottom: #00FF00 1px dotted;
+    position: absolute;
+    top: 9em;
+    left: 1em;
+    width: 21em;
+    height: 17em;
+}
+
+.title {
+    float: left;
+    resize: both;
+}
+
+.files {
+    float: right;
+    resize: both;
+}
+
+.prof {
+    float: right;
+    resize: both;
+}
+
+.frame {
+    float: left;
+    resize: both;
+}
+
+.pic {
+    float: right;
+    resize: both;
+}
+
+.a {
+    position: absolute;
+    top: 4.8em;
+    left: 33em;
+}
+
+.b {
+    position: absolute;
+    top: 4.8em;
+    left: 50em;
+}
+
+.c {
+    position: absolute;
+    top: 13em;
+    left: 33em;
+}
+
+.d {
+    position: absolute;
+    top: 13em;
+    left: 49em;
+}
