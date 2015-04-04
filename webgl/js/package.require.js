@@ -1,4 +1,4 @@
-define( [ './threex.oimo.js'
-	, './vendor/oimo.js'
+define( [ 'threex.oimo.js'
+	, 'oimo.js'
 	], function(){
 });
