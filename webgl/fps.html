@@ -256,10 +256,11 @@
 			renderer.setPixelRatio( window.devicePixelRatio );
 
 			var camera = new THREE.PerspectiveCamera( 60, 1, 0.1, 9000 );
-
+			var light = new THREE.AmbientLight( 0x404040 ); // soft white light
 			var scene = new THREE.Scene();
 
 			scene.add( camera );
+			scene.add( light );
 
 			scene.add( makeSkybox( [
 				'http://mrdoob.github.io/three.js/examples/textures/cube/skybox/px.jpg', // right
