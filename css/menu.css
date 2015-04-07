@@ -55,9 +55,8 @@ iframe {
 }
 
 .pic {
-    position: absolute;
-    top: 25em;
-    left: 33em;
+    float: right;
+    resize: both;
 }
 
 .a {
