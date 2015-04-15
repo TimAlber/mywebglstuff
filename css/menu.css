@@ -40,5 +40,11 @@ a:active {
     left:30em;
     top:23em;
 }
+.handle {
+	border: 1px solid #aaaaaa;
+	background: #cccccc url("images/ui-bg_highlight-soft_75_cccccc_1x100.png") 50% 50% repeat-x;
+	color: #222222;
+	font-weight: bold;
+}
 
 
