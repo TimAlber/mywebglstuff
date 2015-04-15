@@ -30,10 +30,15 @@ a:hover {
 a:active {
     color: red;
 }
-files:{
+.files {
     position: absolute;
     left:30em;
-    top:2em;
+    top:.5em;
+}
+.profile {
+    position: absolute;
+    left:30em;
+    top:23em;
 }
 
 
