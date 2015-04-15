@@ -40,13 +40,27 @@ a:active {
     left:30em;
     top:23em;
 }
-.handle {
+.thandle {
 	position: absolute;
-    	left:1px;
-    	top:.1px;
-	border: 1px solid #aaaaaa;
-	color: #222222;
-	font-weight: bold;
+    left:.5em;
+    bottom:5em;
+	width: 26em;
 }
-
-
+.ihandle {
+	position: absolute;
+    left:.5em;
+    bottom:19.7em;
+	width: 22em;
+}
+.fhandle {
+	position: absolute;
+    left:.5em;
+    bottom:19.4em;
+	width: 33em;
+}
+.phandle {
+	position: absolute;
+    left:.5em;
+    bottom:6.5em;
+	width: 33.5em;
+}
