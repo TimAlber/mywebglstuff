@@ -9,23 +9,25 @@
   <script>
 	  $(function() {
 		$( "#title" ).draggable({handle: "p"});
-		$( "#iframe" ).draggable();
-		$( "#files" ).draggable();
-		$( "#profile" ).draggable();
+		$( "#iframe" ).draggable({handle: "p"});
+		$( "#files" ).draggable({handle: "p"});
+		$( "#profile" ).draggable({handle: "div"});
 	  });
   </script>
 </head>
 <body>
  
 <div id="title" class="title">
-	<p class="handle">I can be dragged only by this handle</p>
+	<p class="thandle">Title</p>
 	<img src="res/title.png" alt="Title">
 </div>
 <div id="iframe" class="iframe">
+	<p class="ihandle">Hackertyper</p>
 	<img src="res/iframe.png" alt="iframe">
 	<iframe src="http://hackertyper.net/" scrolling="no" width="450" height="365"></iframe>
 </div>
 <div id="files" class="files">
+	<p class="fhandle">Files</p>
 	<table width= "675px" height= "420px" background="res/files.png">
 	<tr>
 	<td style= "Text-align:center"><a href="webgl/cube.html" target="_blank">Cube</a></td>
@@ -38,6 +40,7 @@
 	</table>
 </div>
 <div id="profile" class="profile">
+	<div class="phandle">Profile</div>
 	<table width="700" height="127" background="res/profile.png" cellpadding="5" cellspacing="0">
 	<tr><td valign="center" style= "Text-align:center"><p><b><br>
 	this is my webgl site.<br>
