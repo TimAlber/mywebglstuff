@@ -1,0 +1,32 @@
+body {
+    background-color: #000000;
+    padding: 4px;
+    color: #FF0000;
+    font-weight: lighter;
+    font-size: 19px;
+}
+
+iframe {
+    border-top: #00FF00 1px dotted;
+    border-right: #00FF00 1px dotted;
+    border-left: #00FF00 1px dotted;
+    border-bottom: #00FF00 1px dotted;
+    position: absolute;
+    left:.3em;
+    top:2em;
+}
+a:link {
+    color: transparent;
+}
+
+a:visited {
+    color: transparent;
+}
+
+a:hover {
+    color: #00FF00;
+}
+
+a:active {
+    color: red;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- saved from url=(0061)http://5.196.9.245/svg-example/WebContent/html/gravity3d.html -->
+<html><head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, height=device-height">
+        <style>
+			body {
+				font-family: Monospace;
+				background-color: #000000;
+				margin: 0px;
+				overflow: hidden;
+			}
+			canvas {
+            width: 100%;
+            height: 100%
+			}
+		</style>
+		<script type="text/javascript" src="./3D Gravity Sandbox_files/three.js"></script>
+		<script type="text/javascript" src="./3D Gravity Sandbox_files/TrackballControls.js"></script>
+        <script type="text/javascript" src="./3D Gravity Sandbox_files/FlyControls.js"></script>
+		<script type="text/javascript" src="./3D Gravity Sandbox_files/Constants.js"></script>
+		<script type="text/javascript" src="./3D Gravity Sandbox_files/CelestialBody.js"></script>
+        <script type="text/javascript" src="./3D Gravity Sandbox_files/meshAddition.js"></script>
+		<script type="text/javascript" src="./3D Gravity Sandbox_files/main3d.js"></script>
+        <script src="js/datguimin.js"></script>
+		
+		<title>3D Gravity Sandbox</title>
+	</head>
+        <body>
+            <div id="canvas">
+            <script type="text/javascript">
+                    threeApp('canvas');
+
+                    gui = new dat.GUI();
+
+                    parameters =
+                    {
+                        G : 6.673E-11,
+                        TIME_DELTA : .02,
+                        EARTH_MASS : 10E13, // 	5.972E+24,
+                        MOON_MASS : 3E10, // 7.348E+22,
+                        reset: function() { resetCube() }
+                    };
+
+                    cubeX.onChange(function(value)
+                    {   cube.position.x = value;   });
+                    cubeY.onChange(function(value)
+                    {   cube.position.y = value;   });
+                    cubeZ.onChange(function(value)
+                    {   cube.position.z = value;   });
+
+                    var cubeColor = gui.addColor( parameters, 'color' ).name('Color').listen();
+                    cubeColor.onChange(function(value) // onFinishChange
+                    {   cube.material.color.setHex( value.replace("#", "0x") );   });
+
+                    var cubeOpacity = gui.add( parameters, 'opacity' ).min(0).max(1).step(0.01).name('Opacity').listen();
+                    cubeOpacity.onChange(function(value)
+                    {   cube.material.opacity = value;   });
+
+                    var cubeMaterial = gui.add( parameters, 'material', [ "Basic", "Lambert", "Phong", "Wireframe" ] ).name('Material Type').listen();
+                    cubeMaterial.onChange(function(value)
+                    {   updateCube();   });
+
+                    var cubeVisible = gui.add( parameters, 'visible' ).name('Visible?').listen();
+                    cubeVisible.onChange(function(value)
+                    {   cube.visible = value;  	});
+
+                    gui.add( parameters, 'reset' ).name("Reset Cube Parameters");
+
+                    gui.open();
+            </script>
+			</div>
+</body>
+</html>
