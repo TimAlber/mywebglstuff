@@ -43,7 +43,7 @@ a:active {
 .handle {
 	position: absolute;
     	left:1px;
-    	top:1px;
+    	top:.1px;
 	border: 1px solid #aaaaaa;
 	color: #222222;
 	font-weight: bold;
