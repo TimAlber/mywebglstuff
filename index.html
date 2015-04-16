@@ -7,27 +7,37 @@
   <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
   <link rel="stylesheet" type="text/css" href="css/menu.css">
   <script>
-	  $(function() {
-		$( "#title" ).draggable({handle: "p"});
-		$( "#iframe" ).draggable({handle: "p"});
-		$( "#files" ).draggable({handle: "p"});
-		$( "#profile" ).draggable({handle: "div"});
+	  $(function() { 
+		$( "#title" ).draggable({handle: "p"}); // assigns id to the jquery draggable object class with the p tag as handle
+		$( "#iframe" ).draggable({handle: "p"});// assigns id to the jquery draggable object class with the p tag as handle
+		$( "#files" ).draggable({handle: "p"}); // assigns id to the jquery draggable object class with the p tag as handle
+		$( "#profile" ).draggable({handle: "div"});// assigns id to the jquery draggable object class with the div tag as handle
 	  });
+	   function toggle_visibility(id) {
+       var e = document.getElementById(id);
+       if(e.style.display == 'block')
+          e.style.display = 'none';
+       else
+          e.style.display = 'block';
+    }
   </script>
 </head>
 <body>
  
 <div id="title" class="title">
 	<p class="thandle">Title</p>
+	<a class="tx" href="#" onclick="toggle_visibility('title');">X</a>
 	<img src="res/title.png" alt="Title">
 </div>
 <div id="iframe" class="iframe">
 	<p class="ihandle">Hackertyper</p>
+	<a class="ti" href="#" onclick="toggle_visibility('title');">X</a>
 	<img src="res/iframe.png" alt="iframe">
 	<iframe src="http://hackertyper.net/" scrolling="no" width="450" height="365"></iframe>
 </div>
 <div id="files" class="files">
 	<p class="fhandle">Files</p>
+	<a class="tf" href="#" onclick="toggle_visibility('title');">X</a>
 	<table width= "675px" height= "420px" background="res/files.png">
 	<tr>
 	<td style= "Text-align:center"><a href="webgl/cube.html" target="_blank">Cube</a></td>
@@ -41,6 +51,7 @@
 </div>
 <div id="profile" class="profile">
 	<div class="phandle">Profile</div>
+	<a class="tp" href="#" onclick="toggle_visibility('title');">X</a>
 	<table width="700" height="127" background="res/profile.png" cellpadding="5" cellspacing="0">
 	<tr><td valign="center" style= "Text-align:center"><p><b><br>
 	this is my webgl site.<br>
