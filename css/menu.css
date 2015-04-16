@@ -64,3 +64,23 @@ a:active {
     bottom:6.5em;
 	width: 33.5em;
 }
+.tx{
+	position: absolute;
+    left:27em;
+    bottom:6em;
+}
+.ti{
+	position: absolute;
+    left:23em;
+    bottom:20.7em;
+}
+.tf{
+	position: absolute;
+    left:33.7em;
+    bottom:20.5em;
+}
+.tp{
+	position: absolute;
+    left:34.5em;
+    bottom:6.7em;
+}
