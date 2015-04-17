@@ -7,37 +7,38 @@
   <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
   <link rel="stylesheet" type="text/css" href="css/menu.css">
   <script>
-	  $(function() { 
-		$( "#title" ).draggable({handle: "p"}); // assigns id to the jquery draggable object class with the p tag as handle
+	  $(function() { 							//this is not php just jquery
+		$( "#title" ).draggable({handle: "p"}); // assigns id to the jquery draggable object class with the p tag as handle 
 		$( "#iframe" ).draggable({handle: "p"});// assigns id to the jquery draggable object class with the p tag as handle
 		$( "#files" ).draggable({handle: "p"}); // assigns id to the jquery draggable object class with the p tag as handle
 		$( "#profile" ).draggable({handle: "div"});// assigns id to the jquery draggable object class with the div tag as handle
 	  });
-	   function toggle_visibility(id) {
-       var e = document.getElementById(id);
-       if(e.style.display == 'block')
-          e.style.display = 'none';
-       else
-          e.style.display = 'block';
-    }
+	    function vis(id) {
+        var e = document.getElementById(id);
+        e.style.display = 'block';
+		}
+	    function invis(id) {
+		var e = document.getElementById(id);
+        e.style.display = 'none';
+		  }
   </script>
 </head>
 <body>
  
 <div id="title" class="title">
 	<p class="thandle">Title</p>
-	<a class="tx" href="#" onclick="toggle_visibility('title');">X</a>
+	<a class="tx" onclick="invis('title');">X</a>
 	<img src="res/title.png" alt="Title">
 </div>
 <div id="iframe" class="iframe">
 	<p class="ihandle">Hackertyper</p>
-	<a class="ti" href="#" onclick="toggle_visibility('title');">X</a>
+	<a class="ti" href="#" onclick="invis('iframe');">X</a>
 	<img src="res/iframe.png" alt="iframe">
 	<iframe src="http://hackertyper.net/" scrolling="no" width="450" height="365"></iframe>
 </div>
 <div id="files" class="files">
 	<p class="fhandle">Files</p>
-	<a class="tf" href="#" onclick="toggle_visibility('title');">X</a>
+	<a class="tf" href="#" onclick="invis('files');">X</a>
 	<table width= "675px" height= "420px" background="res/files.png">
 	<tr>
 	<td style= "Text-align:center"><a href="webgl/cube.html" target="_blank">Cube</a></td>
@@ -51,7 +52,7 @@
 </div>
 <div id="profile" class="profile">
 	<div class="phandle">Profile</div>
-	<a class="tp" href="#" onclick="toggle_visibility('title');">X</a>
+	<a class="tp" href="#" onclick="invis('profile');">X</a>
 	<table width="700" height="127" background="res/profile.png" cellpadding="5" cellspacing="0">
 	<tr><td valign="center" style= "Text-align:center"><p><b><br>
 	this is my webgl site.<br>
@@ -59,6 +60,16 @@
     if you want you can either fork me on <a href="https://github.com/TimAlber/mywebglstuff" target="_blank">github</a> or just copy stuff directly
     from here.<br>now move these windows around!</p>
 	</b></p></td></tr></table>
+</div>
+<div class="menu">
+	<center>
+	<br>
+	<a href="https://github.com/TimAlber/mywebglstuff" target="_blank"> <mark>Help</mark> </a> 
+	<a onclick="vis('title');"> <mark>Title</mark> </a> 
+	<a onclick="vis('iframe');"> <mark>Hackertyper</mark> </a> 
+	<a onclick="vis('files');"> <mark>Files</mark> </a> 
+	<a onclick="vis('profile');"> <mark>Profile</mark> </a> 
+	</center>
 </div>
  
  
